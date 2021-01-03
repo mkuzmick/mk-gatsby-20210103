@@ -1,0 +1,25 @@
+import { useState, useEffect } from 'react'
+
+# Let's fetch some data and display it!
+
+export const PokemonData = () => {
+  const [pokemon, setPokemon] = useState(null)
+  useEffect(() => {
+    const fetchPokemon = () => {
+      fetch('https://pokeapi.co/api/v2/ability/')
+        .then((result) => result.json())
+        .then((data) => setPokemon(data))
+    }
+    fetchPokemon()
+  }, [])
+  if (!pokemon) {
+    return <h1>Fetching pokemon...</h1>
+  }
+  return <pre>{JSON.stringify(pokemon, null, 2)}</pre>
+}
+
+umm
+
+<PokemonData />
+
+yes?
