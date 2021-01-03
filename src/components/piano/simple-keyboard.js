@@ -27,7 +27,9 @@ const SimpleKeyboard = (props) => {
     audioContext = new (window.AudioContext || window.webkitAudioContext)();
   }
   return (
-    <div>
+    <div style={{
+      marginBottom: "20px"
+    }}>
       <SoundfontProvider
     instrumentName="acoustic_grand_piano"
     audioContext={audioContext}

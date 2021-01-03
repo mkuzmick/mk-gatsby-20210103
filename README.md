@@ -5,7 +5,7 @@ Just another daily Gatsby project, this one starting with the vanilla starter. T
 Here are links to the [repo](https://github.com/mkuzmick/mk-gatsby-20210103) and [site](https://mk-gatsby-20210103.netlify.app/).
 
 
-## STEPS
+## TODAY'S STEPS
 
 Logging the steps (and time involved) in today's Gatsby project.
 
@@ -77,12 +77,21 @@ Logging the steps (and time involved) in today's Gatsby project.
   * [gatsby docs also show how to make components available as shortcodes](https://www.gatsbyjs.com/docs/how-to/routing/mdx/#part-3-importing-jsx-components-and-mdx-documents) . . . see second half of section 3
   * [unrelated but cool essay on progressive disclosure and layers of abstraction](https://www.jason.af/progressive-disclosure-of-complexity)
   * [the original progressive disclosure source](https://www.nngroup.com/articles/progressive-disclosure/)
-  * 
-
-
-
-
-* add in some components. We grabbed some from
+* I'll have to come back to all of this tomorrow, but for today I'll just stop at creating an `index.mdx` file in pages--I had no idea you could use an `.mdx` file for the homepage, but I guess it's just another page, so let's do it.
+* to add in components, I'll grabe them from 
   * [react-color](https://casesandberg.github.io/react-color/)
-  * [react-piano](https://github.com/kevinsqi/react-piano)
+  * [react-piano](https://github.com/kevinsqi/react-piano) . . . NOTE: I encountered a bit of a problem deploying this, see note below.
+
   
+
+## NOTES
+Just little things that came up:
+
+* Ran into a little bit of trouble as soon as we moved from `gatsby develop` to deploying on Netlify, with consistent `WebpackError: ReferenceError: window is not defined` errors. [This page in the Gatsby docs](https://www.gatsbyjs.com/docs/debugging-html-builds/) provides some useful solutions.
+* It appears that you need to restart the dev server when you create a new mdx page before Gatsby actually creates the page, but then updates to that page happen without a restart.
+* even though most articles on "moving from md to mdx" really get you to wipe the slate clean, uninstalling `gatsby-transformer-remark`, etc., it appears that you *can* run both `gatsby-plugin-mdx` and `gatsby-transformer-remark`, using the former for all `.mdx` files and the latter for all `.md` files. Is there a reason the tutorials aren't doing this? especially given that the transition from `.md` to `.mdx` can create some headaches, because there is syntax that's OK in Markdown but NOT OK in JSX/MDX.
+
+
+## TOMORROW
+
+* let's try a starter that comes configured for mdx? maybe [this one](https://www.gatsbyjs.com/starters/konstantinmuenster/gatsby-starter-portfolio-minimal/)?
