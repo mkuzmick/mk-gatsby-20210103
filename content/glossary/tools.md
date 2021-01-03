@@ -1,4 +1,5 @@
-# MDX TEST
+AND THIS IS MD
+
 
 is this already showing up as a thing?
 
@@ -6,4 +7,4 @@ is this already showing up as a thing?
 
 And did that image go OK?
 
-![an image of a saw](../../../content/images/bg-saw.jpg)
+![an image of a saw](../images/bg-saw.jpg)
