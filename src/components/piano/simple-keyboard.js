@@ -7,7 +7,6 @@ import SoundfontProvider from './SoundfontProvider';
 import './styles.css';
 
 // webkitAudioContext fallback needed to support Safari
-const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 const soundfontHostname = 'https://d1pzp51pvbm36p.cloudfront.net';
 
 const noteRange = {
@@ -46,6 +45,8 @@ function SimpleKeyboard() {
 }
 
 function BasicPiano() {
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
   return (
     <SoundfontProvider
       instrumentName="acoustic_grand_piano"
@@ -66,6 +67,8 @@ function BasicPiano() {
 }
 
 function ResponsivePiano(props) {
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
   return (
     <DimensionsProvider>
       {({ containerWidth, containerHeight }) => (
